@@ -28,13 +28,29 @@ class TaskItemWidget extends StatelessWidget {
         );
       },
       child: ListTile(
-        title: Text(
-          task.title,
-          style: TextStyle(
-            color: task.isDone ? Colors.green : Colors.white,
-            decoration: task.isDone ? TextDecoration.lineThrough : null,
-            decorationColor: Colors.green, 
-            decorationThickness: 2, 
+        title: RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: task.title,
+                style: TextStyle(
+                  color: task.isDone ? Colors.green : Colors.white,
+                  decoration: task.isDone ? TextDecoration.lineThrough : null,
+                  decorationColor: Colors.green,
+                  decorationThickness: 2,
+                  fontSize: 16,
+                ),
+              ),
+              TextSpan(
+                text: ' (${task.status})',
+                style: TextStyle(
+                  color:
+                      task.status == 'Pendente' ? Colors.amber : Colors.green,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
+              ),
+            ],
           ),
         ),
         leading: Checkbox(
@@ -42,7 +58,7 @@ class TaskItemWidget extends StatelessWidget {
           onChanged: (_) {
             taskViewModel.toggleTaskStatus(task.id);
           },
-          activeColor: Colors.green, 
+          activeColor: Colors.green,
           checkColor: Colors.white,
         ),
       ),

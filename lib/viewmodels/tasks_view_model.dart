@@ -17,6 +17,7 @@ class TaskViewModel extends ChangeNotifier {
     final task = _taskBox.values.firstWhere((task) => task.id == id);
     final taskKey = task.key;
     task.isDone = !task.isDone;
+    task.status = task.isDone ? 'Concluído' : 'Pendente';
     _taskBox.put(taskKey, task);
     notifyListeners();
   }
