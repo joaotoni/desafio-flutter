@@ -17,7 +17,7 @@ O objetivo principal é criar um aplicativo de lista de tarefas usando a arquite
 ---
 
 ## 🏛️ Estrutura de Pastas (MVVM)
-
+```bash
 lib/
 ├── core/               # Helpers ou utilitários (futuramente)
 ├── models/
@@ -30,7 +30,7 @@ lib/
 │    └── widgets/
 │         └── task_item_widget.dart    # Widget que representa cada tarefa na lista
 └── main.dart              # Ponto de entrada da aplicação
-
+```
 
 ### 📚 Sobre a arquitetura MVVM utilizada:
 
