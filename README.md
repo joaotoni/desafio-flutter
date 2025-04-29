@@ -70,7 +70,7 @@ Essa separação de camadas permite que o projeto seja organizado, modular e fá
 
 ```bash
 git clone https://github.com/joaotoni/desafio-flutter.git
-cd desafio-flutter-todolist
+cd desafio-flutter
 ```
 
 2. Instale as dependências:
