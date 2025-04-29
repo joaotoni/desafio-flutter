@@ -69,7 +69,7 @@ Essa separação de camadas permite que o projeto seja organizado, modular e fá
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/desafio-flutter-todolist.git
+git clone https://github.com/joaotoni/desafio-flutter.git
 cd desafio-flutter-todolist
 ```
 
